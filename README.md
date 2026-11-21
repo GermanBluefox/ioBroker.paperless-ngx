@@ -31,6 +31,7 @@ select the refresh cycle and the type of reading data: (without, basic oder deta
 -->
 ### **WORK IN PROGRESS**
 - (@GermanBluefox) Added the message "help": a description of all messages for AI agents (e.g. pi-agent), and common.supportedMessages.help
+- (@GermanBluefox) Added the standard command of the shared catalog: docs.searchDocuments (message `searchDocuments`, read only, answers the documents)
 
 ### 1.0.4 (2026-10-25)
 - (BenAhrdt) Update `@iobroker/testing` to version 6.3.1.

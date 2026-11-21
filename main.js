@@ -12,6 +12,7 @@ const utils = require('@iobroker/adapter-core');
 const paperlesscommunicationClass = require('./lib/modules/paperlessCommunication');
 const schedule = require('node-schedule');
 const { COMMANDS, HELP } = require('./lib/help');
+const { searchDocuments } = require('./lib/standard');
 
 class PaperlessNgx extends utils.Adapter {
     /**
@@ -189,6 +190,13 @@ class PaperlessNgx extends utils.Adapter {
         }
 
         try {
+            if (obj.command === 'searchDocuments') {
+                // docs.searchDocuments of the shared catalog: reads only, the result states stay as they are
+                const answer = await searchDocuments(this, this.paperlessCommunication, obj.message);
+                this.sendTo(obj.from, obj.command, answer, obj.callback);
+                return;
+            }
+
             if (obj.command === 'dashboardInfo') {
                 const connection = await this.getStateAsync('info.connection');
                 const currentStep = await this.getStateAsync(this.currentStep);
