@@ -28,8 +28,9 @@ select the refresh cycle and the type of reading data: (without, basic oder deta
 ## Changelog
 <!--
 	Placeholder for the next version (at the beginning of the line):
+	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 1.0.5 (2026-11-20)
 - (@GermanBluefox) Added the message "help": a description of all messages for AI agents (e.g. pi-agent), and common.supportedMessages.help
 - (@GermanBluefox) Added the standard command of the shared catalog: docs.searchDocuments (message `searchDocuments`, read only, answers the documents)
 
@@ -47,9 +48,6 @@ select the refresh cycle and the type of reading data: (without, basic oder deta
 ### 1.0.1 (2026-08-05)
 - (copilot) Adapter requires node.js >= 22 now
 - (BenAhrdt) Add HTTPS and reverse proxy URL support while keeping existing HTTP configurations compatible
-
-### 1.0.0 (2026-04-03)
-* (BenAhrdt) change axios to fetch
 
 [Older changelogs can be found there](CHANGELOG_OLD.md)
 
